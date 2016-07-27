@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String check</title>
+	<style>	
+		body
+		{
+			background-color: #dfd3f8;
+		}
+		.center
+		{
+			position: absolute;
+ 			margin: auto;
+			top: -10%;
+  			right: 0;
+  			bottom: 0;
+			left: 0;
+  			width: 330px;
+		  	height: 120px;
+  			background-color: #4a235a;
+  			text-align: center;
+  			color: white;
+  			border-radius: 5%;
+		}
+		.center1
+		{
+			position: absolute;
+			top: 5%;
+  			right: 0;
+  			bottom: 0;
+			left: 0;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="center">
+	<div class="center1">
+	
+		Please enter the String to check: 
+			<input id="str" type="text" name="fname"/>
+			<br> <br> 
+			<input type="button" onclick="myfunction()" value="Check"/>
+	</div>
+	</div>
+
+	<script>
+	function isEmpty(x)
+	{ 
+		this.x=x;
+
+		this.newnumber= function()
+
+		{
+			if(this.x.trim().length==0 || this.x== null)
+				return true;
+			else
+				return false;
+		};
+	}
+	function myfunction()
+	{
+		var x=document.getElementById("str").value;
+		var empty = new isEmpty(x);
+		alert(empty.newnumber());
+	}
+	</script>
+</body>
+</html>
